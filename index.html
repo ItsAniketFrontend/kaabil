@@ -44,12 +44,12 @@
                     <a class="nav-link" href="#">FAQ's</a>
                   </li>
                   <li class="nav-item d-lg-none">
-                    <button class="call-btn"><a href="tel:+918094361234">+91-8094361234</a></button>
+                    <button class="call-btn"><a href="tel:+919785 547 575">+91-9785 547 575</a></button>
                   </li>
                 </ul>
               </div>
               <div class="d-none d-lg-flex">
-                <button class="call-btn"><a href="tel:+918094361234">+91-8094361234</a></button>
+                <button class="call-btn"><a href="tel:+919785 547 575">+91-9785 547 575</a></button>
               </div>
             </div>
           </nav>
@@ -64,13 +64,13 @@
               <h1>Best <span>Digital Marketing Course</span> in Jaipur with Gen-AI [Mastery Program]</h1>
               <p>Launch your career with the Most Trusted Digital Marketing Institute.</p>
               <ul>
-                <li><img src="Images/check-mark.png" width="21px" alt="">AI-Driven Course Curriculum</li>
-                <li><img src="Images/check-mark.png" width="21px" alt="">100% Placement Assistance</li>
-                <li><img src="Images/check-mark.png" width="21px" alt="">E-commerce & Startup Consultancy</li>
-                <li><img src="Images/check-mark.png" width="21px" alt="">Internship & Freelancing Opportunities</li>
-                <li><img src="Images/check-mark.png" width="21px" alt="">Real-time Projects & Case Studies</li>
+                <li><img src="Images/check-mark.png" width="21px" class="me-2" alt="">AI-Driven Course Curriculum</li>
+                <li><img src="Images/check-mark.png" width="21px" class="me-2" alt="">100% Placement Assistance</li>
+                <li><img src="Images/check-mark.png" width="21px" class="me-2" alt="">E-commerce & Startup Consultancy</li>
+                <li><img src="Images/check-mark.png" width="21px" class="me-2" alt="">Internship & Freelancing Opportunities</li>
+                <li><img src="Images/check-mark.png" width="21px" class="me-2" alt="">Real-time Projects & Case Studies</li>
               </ul>
-              <button><a href="">I'am Interested</a></button>
+              <button onclick="toggleForm()">I'am Interested</button>
               <img src="Images/GMB-Meta.pngw3.webp" class="img-fluid" alt="">
             </div>
             <div class="col-lg-5 my-lg-2 my-4">
@@ -84,7 +84,7 @@
       <section class="about py-3 py-lg-5">
         <div class="container">
           <div class="row">
-            <div class="col-lg-5 my-lg-2 my-4">
+            <!-- <div class="col-lg-5 my-lg-2 my-4">
               <form action="">
                 <div class="form-box">
                   <div class="mb-2">
@@ -104,13 +104,13 @@
                   </div>
                 </div>
               </form>
-            </div>
-            <div class="col-lg-7 my-lg-2 my-4">
+            </div> -->
+            <div class="col-lg-12 my-lg-2 my-4">
               <h2>Welcome to Jaipur's One of <span>The Best Digital Marketing</span> Institute</h2>
               <p>Looking to build a successful career in digital marketing? You’re at the right place! Our Digital Marketing course in Jaipur is designed to help you learn the latest skills in SEO, social media, online advertising, and more.</p>
               <p>With expert trainers and hands-on practice, we make learning easy and fun. We use advanced teaching methods, including visual presentations, engaging videos, and digital boards, to make every session interactive and simple to understand.</p>
               <p>Whether you’re a student, professional, or entrepreneur, this course is perfect for anyone looking to grow their knowledge and career. Join us today and start your journey! with our digital marketing classes in Jaipur</p>
-              <button class="mt-3"><a href="tel:+918094361234">Call Now</a></button>
+              <button class="mt-3"><a href="tel:+919785 547 575">Call Now</a></button>
             </div>
           </div>
         </div>
@@ -317,6 +317,75 @@
           </div>
         </div>
       </section>
+
+      <section class="cta-button d-flex d-lg-none">
+        <div class="container">
+          <div class="row">
+            <div class="col-6 px-0">
+              <button onclick="toggleForm()"><img src="Images/apply.png" width="21px" alt="">Apply Now</button>
+            </div>
+            <div class="col-6 px-0">
+              <button><a href="tel:+919785 547 575"><img src="Images/call.png" width="21px" alt="">Call Now</a></button>  
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="whatsapp-icon">
+        <a href="https://api.whatsapp.com/send?phone=9785547575"><img src="Images/whatsapp.png" width="52px" alt=""></a>
+      </section>
+
+      <div class="container popup_form">
+        <div class="overlay" id="overlay"></div>
+    
+        <!-- Form Container -->
+        <div class="form-container" id="formContainer">
+          <span class="close-btn btn btn-danger" onclick="toggleForm()">X</span>
+          <h5 class="text-center mt-4 mb-4 ">Please fill up the below details</h5>
+          <form id="logs" method="post">
+            <div id="table-data"></div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control txtNumeric" id="name" name="name" placeholder="Enter your name"
+                required>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="text" class="form-control numbersOnly" id="phone" minlength="10" maxlength="10" name="phone"
+                placeholder="Enter your phone number" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="3"
+                placeholder="Enter your message"></textarea>
+            </div>
+            <div class="text-center mb-3">
+              <button type="submit" id="btnsubmits" class="btn btn-warning w-50">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <script>
+        // Function to toggle form visibility
+        function toggleForm() {
+          var overlay = document.getElementById('overlay');
+          var formContainer = document.getElementById('formContainer');
+          if (overlay.style.display === 'none' || overlay.style.display === '') {
+            overlay.style.display = 'block';
+            formContainer.style.display = 'block';
+          } else {
+            overlay.style.display = 'none';
+            formContainer.style.display = 'none';
+          }
+        }
+      </script>
+      <script>
+        setTimeout(toggleForm, 3000);
+      </script>
 
     </main>
 
